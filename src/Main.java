@@ -1,14 +1,15 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Home work metod");
         System.out.println("Задача 1");
         int year = 2010;
-        cheeckYear(year);
+        checkYear(year);
         System.out.println("Задача 2");
         byte clientOS = 1;
-        selectApp(clientOS, year);
+        int currentYear = LocalDate.now().getYear();
+        selectApp(clientOS, currentYear);
         System.out.println("Задача 3");
         int deliveryDistance = 50;
         int dayOfDelivery = calcDayOfDelivery(deliveryDistance);
@@ -18,7 +19,7 @@ public class Main {
             System.out.println("Доставка займет " + dayOfDelivery + " дня.");
         }
     }
-    public static void cheeckYear(int year) {
+    public static void checkYear(int year) {
          if (year>=1584 && ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))) {
             System.out.println("Год " + year + " является високосным");
         } else {
